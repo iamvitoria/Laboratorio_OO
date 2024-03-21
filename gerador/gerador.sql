@@ -1,27 +1,24 @@
-CREATE DATABASE IF NOT EXISTS MinhaBaseDeDados;
-
-USE MinhaBaseDeDados;
-
--- Tabela para armazenar informações dos clientes
-CREATE TABLE IF NOT EXISTS clientes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    endereco VARCHAR(255)
+-- Criação da tabela CLIENTES
+CREATE TABLE CLIENTES (
+    ID INTEGER PRIMARY KEY,
+    NOME TEXT,
+    EMAIL TEXT
 );
 
--- Tabela para armazenar informações dos funcionários
-CREATE TABLE IF NOT EXISTS funcionarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
-    cargo VARCHAR(100)
+-- Criação da tabela FUNCIONARIOS
+CREATE TABLE FUNCIONARIOS (
+    ID INTEGER PRIMARY KEY,
+    NOME TEXT,
+    CARGO TEXT
 );
 
--- Tabela para armazenar informações das vendas
-CREATE TABLE IF NOT EXISTS vendas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT,
-    funcionario_id INT,
-    valor DECIMAL(10, 2),
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
-    FOREIGN KEY (funcionario_id) REFERENCES funcionarios(id)
+-- Criação da tabela VENDAS
+CREATE TABLE VENDAS (
+    ID INTEGER PRIMARY KEY,
+    CLIENTE_ID INTEGER,
+    FUNCIONARIO_ID INTEGER,
+    VALOR REAL,
+    DATA_VENDA TEXT,
+    FOREIGN KEY (CLIENTE_ID) REFERENCES CLIENTES(ID),
+    FOREIGN KEY (FUNCIONARIO_ID) REFERENCES FUNCIONARIOS(ID)
 );
