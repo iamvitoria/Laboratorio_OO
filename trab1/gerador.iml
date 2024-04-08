@@ -8,5 +8,17 @@
     <content url="jar://$MODULE_DIR$/sqlite-jdbc-3.5.8.jar/sqlite-jdbc-3.5.8.jar!/" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/sqlite-jdbc-3.5.8.jar/sqlite-jdbc-3.5.8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/sqlite-jdbc-3.5.8.jar/sqlite-jdbc-3.5.8.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="lib" level="project" />
   </component>
 </module>
