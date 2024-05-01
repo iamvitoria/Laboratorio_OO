@@ -66,14 +66,14 @@ def main():
 
             elif action_choice == 1:
                 # Adicionar registro
-                entity_values = [current_id]  # O primeiro valor é o ID
+                entity_values = [current_id]
                 for column in column_names:
-                    if column != 'id':  # Não permitir a entrada do ID
+                    if column != 'id':
                         value = input(f"Digite o valor para {column}: ")
                         entity_values.append(value)
                 entity = EntityClass(*entity_values)
                 dao.insert(entity)
-                current_id += 1  # Incrementa o ID para o próximo registro
+                current_id += 1
 
             elif action_choice == 2:
                 # Atualizar registro
@@ -82,10 +82,10 @@ def main():
                 if entity is None:
                     print("Registro não encontrado.")
                     continue
-                print(f"Registro atual: {vars(entity)}")  # Mostra o registro atual de forma mais legível
+                print(f"Registro atual: {vars(entity)}")
                 print("Selecione o campo que deseja atualizar:")
                 updateable_columns = [col for col in column_names if col != 'id']
-                for i, column in enumerate(updateable_columns, start=1):  # A listagem começa em 1
+                for i, column in enumerate(updateable_columns, start=1): 
                     print(f"{i}. {column}")
                 field_choice = int(input("Escolha: ")) - 1
                 new_value = input(f"Digite o novo valor para {updateable_columns[field_choice]}: ")

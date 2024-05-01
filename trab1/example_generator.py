@@ -2,6 +2,7 @@
 import random
 import string
 
+#Gera valores dinamicamente conforme o tipo de dado
 def generate_random_value(column_type):
     if column_type == "INTEGER":
         return random.randint(1, 100)
