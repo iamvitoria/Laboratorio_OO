@@ -1,5 +1,8 @@
+# class_teste.py
+
 import unittest
 from datetime import date
+from class_funcionario import Funcionario, Assentamento
 
 class TestAssentamentos(unittest.TestCase):
 
