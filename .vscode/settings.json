@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./trab3",
+        "./trab3"
+    ]
+}
